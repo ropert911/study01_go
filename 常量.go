@@ -11,6 +11,14 @@ const (
 	serviceName string = "device-random"
 )
 
+type Service struct {
+	name string
+}
+
+var (
+	svc Service
+)
+
 func main() {
 
 	fmt.Println(serviceName, version)
@@ -19,6 +27,10 @@ func main() {
 	fmt.Println("11111111")
 	fmt.Fprintf(os.Stderr, "error: %v", err)
 	fmt.Println("2222222")
+
+	svc.name = "server name"
+	fmt.Println(svc)
+
 	os.Exit(1)
 	fmt.Println("The end print")
 }

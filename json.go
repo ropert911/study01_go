@@ -93,11 +93,20 @@ func test4() {
 		return
 	}
 	fmt.Println(string(data))
+}
 
+func test5() {
+	var response map[string]interface{}
+	b3 := []byte(`{"name":"xq","cmd":"ping a host"}`)
+	json.Unmarshal(b3, &response)
+
+	deviceName := response["name"].(string)
+	fmt.Println(deviceName, response["cmd"].(string))
 }
 func main() {
 	test1()
 	test2()
 	test3()
 	test4()
+	test5()
 }

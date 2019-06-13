@@ -98,8 +98,8 @@ func jsonTest4() {
 
 func jsonTest5() {
 	fmt.Println("jsonTest5===========")
-	var response map[string]interface{}
 	b3 := []byte(`{"name":"xq","cmd":"ping a host"}`)
+	var response map[string]interface{}
 	json.Unmarshal(b3, &response)
 
 	deviceName := response["name"].(string)

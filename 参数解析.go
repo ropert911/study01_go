@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"os"
 )
 
 var (
@@ -10,6 +11,20 @@ var (
 	confDir     string
 	useRegistry bool
 )
+var usageStr = `
+Usage: %s [options]
+Server Options:
+    -c, --consul                    Indicates service should use Consul
+    -p, --profile <name>            Indicate configuration profile other than default
+Common Options:
+    -h, --help                      Show this message
+`
+
+func HelpCallback() {
+	msg := fmt.Sprintf(usageStr, os.Args[0])
+	fmt.Printf("%s\n", msg)
+	os.Exit(0)
+}
 
 // Bootstrap the Device Service in a default way
 func main() {
@@ -20,6 +35,7 @@ func main() {
 	flag.StringVar(&confProfile, "p", "", "Specify a profile other than default.")
 	flag.StringVar(&confDir, "confdir", "", "Specify an alternate configuration directory.")
 	flag.StringVar(&confDir, "c", "", "Specify an alternate configuration directory.")
+	flag.Usage = HelpCallback
 	flag.Parse()
 
 	fmt.Println("confProfile ", confProfile, "confDir ", confDir, "useRegistry ", useRegistry)

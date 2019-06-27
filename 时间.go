@@ -5,23 +5,6 @@ import (
 	"time"
 )
 
-func main() {
-	//打印utc的纳秒、微秒、毫秒
-	//testTime1()
-
-	//时间格式化显示
-	//testTime2()
-
-	//设置时间
-	//testTime3()
-
-	//从字符串解析出时间
-	//testTime4()
-
-	//时间加减运算
-	testTime5()
-}
-
 func testTime1() {
 	var t = time.Now() //返回Time构建
 	nans := t.UnixNano()
@@ -90,4 +73,21 @@ func testTime5() {
 		fmt.Println("每 2 打印一次")
 		time.Sleep(time.Second * time.Duration(2))
 	}
+}
+
+func main() {
+	//打印utc的纳秒、微秒、毫秒
+	//testTime1()
+
+	//时间格式化显示
+	//testTime2()
+
+	//设置时间
+	//testTime3()
+
+	//从字符串解析出时间
+	//testTime4()
+
+	//时间加减运算
+	testTime5()
 }

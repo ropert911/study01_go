@@ -7,10 +7,10 @@ import (
 
 func main() {
 	var waitGroup sync.WaitGroup
-	n_count := 2
-	waitGroup.Add(n_count)
+	nCount := 2
+	waitGroup.Add(nCount)
 
-	for i := 0; i < n_count; i++ {
+	for i := 0; i < nCount; i++ {
 		go func(wg *sync.WaitGroup) {
 			defer wg.Done()
 			fmt.Println("work: finish")

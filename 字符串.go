@@ -46,10 +46,42 @@ func strTest2() {
 	fmt.Println(f, err) // 0.12345678901234568
 }
 
+func strTest3() {
+	tip1 := "genji is a ninja"
+	fmt.Println(len(tip1))
+
+	//string==>[]byte
+	str2 := "hello"
+	data2 := []byte(str2)
+	fmt.Println(data2)
+
+	//[]byte=>string
+	str2 = string(data2[:])
+	fmt.Println(str2)
+}
+
+func strTest4() {
+	str := "123456"
+	fmt.Println(str[:2])
+	fmt.Println(str[2:])
+	fmt.Println(str[2:4])
+	data2 := []byte(str)
+	fmt.Println(data2[:2])
+	fmt.Println(data2[2:])
+	fmt.Println(data2[2:4])
+}
+
 // 示例
 func main() {
 	//根据字符串解析出整数
 	//strTest1()
-	//浮点数解析
-	strTest2()
+
+	//根据字符串解析出浮点数
+	//strTest2()
+
+	//string bytes相互转换
+	//strTest3()
+
+	//string与bytes的切片
+	strTest4()
 }

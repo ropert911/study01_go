@@ -15,4 +15,6 @@ func SomeFunc() error {
 func main() {
 	err := SomeFunc()
 	fmt.Println(err)
+	err = fmt.Errorf("未知错误 %s", "123")
+	fmt.Println(err)
 }

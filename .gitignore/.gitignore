@@ -3,7 +3,6 @@
 .project
 .settings/
 
-
 # Intellij project files
 *.iml
 .idea/
@@ -11,3 +10,8 @@
 # Others
 target/
 logs/
+.DS_Store
+
+# python
+*.pyc
+__pycache__

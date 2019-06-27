@@ -1,4 +1,4 @@
-package main
+package 位操作
 
 import "fmt"
 

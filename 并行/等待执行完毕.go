@@ -1,4 +1,4 @@
-package main
+package 并行
 
 import (
 	"fmt"

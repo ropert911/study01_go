@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func test2() {
+func pointerTest2() {
 	a := "xyz"
 	b := "opq"
 	pa := &a  //pa为指向a的指针
@@ -18,5 +18,5 @@ func test2() {
 }
 
 func main() {
-	test2()
+	pointerTest2()
 }

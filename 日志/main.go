@@ -1,12 +1,11 @@
-package main
+package 日志
 
 import (
 	"fmt"
-	"study01_go/logger"
 )
 
 var (
-	log logger.LoggingClient
+	log LoggingClient
 )
 
 func initLog(serverName string, logLevel string, EnableRemote bool) {
@@ -19,7 +18,7 @@ func initLog(serverName string, logLevel string, EnableRemote bool) {
 		logTarget = serverName + ".log"
 		fmt.Println("EnableRemote is false, using local log file")
 	}
-	log = logger.NewClient(serverName, false, logTarget, logLevel)
+	log = NewClient(serverName, false, logTarget, logLevel)
 }
 
 func main() {

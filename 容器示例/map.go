@@ -1,4 +1,4 @@
-package main
+package 容器示例
 
 import "fmt"
 

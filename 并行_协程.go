@@ -20,6 +20,7 @@ func main() {
 	fmt.Println("当前进程Id:", os.Getpid())
 	fmt.Println("cpu数量：", runtime.NumCPU())
 	fmt.Println("routin数：", runtime.NumGoroutine())
+	runtime.GOMAXPROCS(1) //设置使用的线程数 1个是没有并发行为的
 
 	done := make(chan bool)
 	go loop(done)

@@ -1,4 +1,4 @@
-package msgmqtt
+package mqtt
 
 import (
 	"fmt"

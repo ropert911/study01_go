@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="219565ec-5de7-4aef-8ee5-9bcdd69cc366" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/用户输入.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chan.go" beforeDir="false" afterPath="$PROJECT_DIR$/生产者消费者.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logTest.go" beforeDir="false" afterPath="$PROJECT_DIR$/日志.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.go" beforeDir="false" afterPath="$PROJECT_DIR$/容器示例/map.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqttreceiver.go" beforeDir="false" afterPath="$PROJECT_DIR$/消息队列/mqtt/mqttreceiver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqttsender.go" beforeDir="false" afterPath="$PROJECT_DIR$/消息队列/mqtt/mqttsender.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgmqtt/Mqtt.go" beforeDir="false" afterPath="$PROJECT_DIR$/消息队列/mqtt/Mqtt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panic_recover.go" beforeDir="false" afterPath="$PROJECT_DIR$/异常与捕获.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/select.go" beforeDir="false" afterPath="$PROJECT_DIR$/select.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/并行1.go" beforeDir="false" afterPath="$PROJECT_DIR$/并行_协程.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/并行2.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数组.go" beforeDir="false" afterPath="$PROJECT_DIR$/容器示例/数组.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/等待.go" beforeDir="false" afterPath="$PROJECT_DIR$/并行_等待执行完毕.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,49 +28,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/参数解析.go">
+        <entry file="file://$PROJECT_DIR$/并行_协程.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/位操作_烟感.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
-              <folding>
-                <element signature="e#14#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/位操作_消安.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logger/logger.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/map.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            <state relative-caret-position="247">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -74,42 +46,71 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/str.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/日志.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/http.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/json.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1482">
+            <state relative-caret-position="228">
               <caret line="82" column="43" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/数组.go">
+        <entry file="file://$PROJECT_DIR$/生产者消费者.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1235">
-              <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
+            <state relative-caret-position="380">
+              <caret line="23" column="18" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/常量.go">
+        <entry file="file://$PROJECT_DIR$/并行_等待执行完毕.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-              <folding>
-                <element signature="e#14#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="95">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/用户输入.go">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/时间.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="225">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/只调一次.go">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -160,7 +161,6 @@
         <option value="$PROJECT_DIR$/msg/Mqtt.go" />
         <option value="$PROJECT_DIR$/msgmqtt/Mqtt.go" />
         <option value="$PROJECT_DIR$/mqttsender.go" />
-        <option value="$PROJECT_DIR$/mqttreceiver.go" />
         <option value="$PROJECT_DIR$/log/logger.go" />
         <option value="$PROJECT_DIR$/xqlogger/logger.go" />
         <option value="$PROJECT_DIR$/logTest.go" />
@@ -173,6 +173,12 @@
         <option value="$PROJECT_DIR$/数组.go" />
         <option value="$PROJECT_DIR$/常量.go" />
         <option value="$PROJECT_DIR$/用户输入.go" />
+        <option value="$PROJECT_DIR$/容器示例/数组.go" />
+        <option value="$PROJECT_DIR$/mqttreceiver.go" />
+        <option value="$PROJECT_DIR$/消息队列/mqtt/mqttreceiver.go" />
+        <option value="$PROJECT_DIR$/select.go" />
+        <option value="$PROJECT_DIR$/panic_recover.go" />
+        <option value="$PROJECT_DIR$/并行1.go" />
       </list>
     </option>
   </component>
@@ -215,6 +221,16 @@
               <item name="study01_go" type="462c0819:PsiDirectoryNode" />
               <item name="logger" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="study01_go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study01_go" type="462c0819:PsiDirectoryNode" />
+              <item name="容器示例" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study01_go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study01_go" type="462c0819:PsiDirectoryNode" />
+              <item name="消息队列" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -239,17 +255,19 @@
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\source_code\go_work\src\study01_go\logger" />
-      <recent name="D:\source_code\go_work\src\study01_go\clients" />
-      <recent name="D:\source_code\go_work\src\study01_go" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\source_code\go_work\src\study01_go\models" />
       <recent name="D:\source_code\go_work\src\study01_go\clients\types" />
       <recent name="D:\source_code\go_work\src\study01_go\xqlogger" />
       <recent name="D:\source_code\go_work\src\study01_go\vendor" />
       <recent name="D:\source_code\go_work\src\study01_go\vendor\github.com\eclipse" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\source_code\go_work\src\study01_go\消息队列\mqtt" />
+      <recent name="D:\source_code\go_work\src\study01_go\容器示例" />
+      <recent name="D:\source_code\go_work\src\study01_go\logger" />
+      <recent name="D:\source_code\go_work\src\study01_go\clients" />
+      <recent name="D:\source_code\go_work\src\study01_go" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -264,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build 用户输入.go">
+  <component name="RunManager" selected="Go Build.go build 只调一次.go">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="study01_go" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -275,20 +293,20 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build 位操作_消安.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build 并行1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="study01_go" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/位操作_消安.go" />
+      <filePath value="$PROJECT_DIR$/并行1.go" />
       <package value="study01_go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build 等待.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build 只调一次.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="study01_go" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/等待.go" />
+      <filePath value="$PROJECT_DIR$/只调一次.go" />
       <package value="study01_go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -338,20 +356,20 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build https.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build panic_recover.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="study01_go" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/https.go" />
+      <filePath value="$PROJECT_DIR$/panic_recover.go" />
       <package value="study01_go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build test.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build select.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="study01_go" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/test.go" />
+      <filePath value="$PROJECT_DIR$/select.go" />
       <package value="study01_go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -369,11 +387,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build 只调一次.go" />
+        <item itemvalue="Go Build.go build 并行1.go" />
+        <item itemvalue="Go Build.go build panic_recover.go" />
+        <item itemvalue="Go Build.go build select.go" />
         <item itemvalue="Go Build.go build 用户输入.go" />
-        <item itemvalue="Go Build.go build 位操作_消安.go" />
-        <item itemvalue="Go Build.go build test.go" />
-        <item itemvalue="Go Build.go build 等待.go" />
-        <item itemvalue="Go Build.go build https.go" />
       </list>
     </recent_temporary>
   </component>
@@ -403,7 +421,7 @@
       <workItem from="1561103793093" duration="45000" />
       <workItem from="1561430074258" duration="2754000" />
       <workItem from="1561537218915" duration="3707000" />
-      <workItem from="1561605459232" duration="248000" />
+      <workItem from="1561605459232" duration="1464000" />
     </task>
     <task id="LOCAL-00001" summary="添加示例">
       <created>1560168034285</created>
@@ -475,17 +493,23 @@
       <option name="project" value="LOCAL" />
       <updated>1560509172690</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="添加log示例">
+      <created>1561605753731</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1561605753732</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72223000" />
+    <option name="totallyTimeSpent" value="73439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13486141" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13486141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -494,7 +518,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4936034" visible="true" weight="0.17908788" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4936034" visible="true" weight="0.22914349" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39933258" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -503,7 +527,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5063966" side_tool="true" visible="true" weight="0.17908788" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5063966" side_tool="true" visible="true" weight="0.22914349" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.32925472" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -527,38 +551,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="添加log示例" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MAC及IP.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-          <folding>
-            <element signature="e#14#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files (x86)/Go/src/net/interface.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files (x86)/Go/src/net/mac.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files (x86)/Go/src/strconv/atoi.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/位操作_test.go" />
     <entry file="file://$PROJECT_DIR$/../github.com/edgexfoundry/iot-simulator/driver/device/senserInfoCreator.go" />
     <entry file="file://D:/Program Files (x86)/Go/src/strconv/itoa.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -634,20 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1388">
-          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/str.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/github.com/eclipse/paho.mqtt.golang/cmd/ssl/main.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -672,45 +650,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mqttsender.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="45" column="21" selection-start-line="43" selection-start-column="20" selection-end-line="45" selection-end-column="21" />
-          <folding>
-            <element signature="e#14#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msgmqtt/Mqtt.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mqttreceiver.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding>
-            <element signature="e#14#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/edgexfoundry/edgex-go-delhi/pkg/models/commandresponse.go" />
     <entry file="file://$PROJECT_DIR$/../github.com/edgexfoundry/edgex-go-delhi/pkg/clients/request.go" />
     <entry file="file://$PROJECT_DIR$/../github.com/edgexfoundry/edgex-go-delhi/pkg/clients/types/errors.go" />
     <entry file="file://$PROJECT_DIR$/../github.com/edgexfoundry/edgex-go-delhi/pkg/models/log_entry.go" />
     <entry file="file://$PROJECT_DIR$/receiver.log" />
-    <entry file="file://$PROJECT_DIR$/logTest.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Program Files (x86)/Go/src/log/log.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
@@ -743,27 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="29" column="73" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/等待.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/时间.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chan.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -805,31 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map.go">
+    <entry file="file://$PROJECT_DIR$/容器示例/map.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1482">
-          <caret line="82" column="43" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数组.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -845,8 +747,123 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/用户输入.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        <state relative-caret-position="342">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/消息队列/mqtt/Mqtt.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/容器示例/数组.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/消息队列/mqtt/mqttsender.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="44" column="21" selection-start-line="42" selection-start-column="20" selection-end-line="44" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/消息队列/mqtt/mqttreceiver.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/select.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/异常与捕获.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/并行2.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/只调一次.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/并行_协程.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/并行_等待执行完毕.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/时间.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/str.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/日志.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/生产者消费者.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="82" column="43" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="43" />
         </state>
       </provider>
     </entry>

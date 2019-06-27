@@ -1,10 +1,9 @@
-package main
+package mqtt
 
 import (
 	"fmt"
 	"net/url"
 	"strings"
-	"study01_go/msgmqtt"
 	"time"
 )
 
@@ -51,7 +50,7 @@ func main() {
 		User:   url.UserPassword(username, password),
 	}
 
-	client, err := msgmqtt.CreateMQTTClient(MqttClientId, uri, keepAlive)
+	client, err := CreateMQTTClient(MqttClientId, uri, keepAlive)
 	if err != nil {
 		fmt.Println(err)
 		return

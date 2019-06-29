@@ -28,7 +28,7 @@ func testTime2() {
 	fmt.Printf("%d-%d-%d %d:%d;%d:%d %v ", t.Year(), t.Month(), t.Day(), t.Hour(), t.Minute(), t.Second(), t.Nanosecond(), time.Local)
 
 	//指定显示格式
-	const shortForm = "2006-01-06 15:04:05"
+	const shortForm = "2006-01-02 15:04:05"
 	str := t.Format(shortForm)
 	fmt.Println(str)
 

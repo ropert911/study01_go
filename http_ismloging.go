@@ -60,4 +60,8 @@ func main() {
 	if nil == err {
 		fmt.Println(*str)
 	}
+
+	var vMap map[string]string
+	json.Unmarshal([]byte(*str), &vMap)
+	fmt.Println("token is :", vMap["data"])
 }

@@ -46,9 +46,16 @@ type LogInfo struct {
 }
 
 func main() {
-	var lInfo = LogInfo{UserName: "admin", Password: "admins", IsRemember: "true"}
-	bytesData, _ := json.Marshal(lInfo)
-	fmt.Println(string(bytesData))
+	//方法一：要构造对象
+	//var lInfo = LogInfo{UserName: "admin", Password: "admins", IsRemember: "true"}
+	//bytesData, _ := json.Marshal(lInfo)
+
+	//方法二：用map进行构建
+	values := map[string]string{"UserName": "admin", "Password": "admins", "IsRemember": "true"}
+	bytesData, _ := json.Marshal(values)
+
+	//`{"UserName":"admin","Password":"admins", "IsRemember":"true"}`   这是对象的字符串
+
 	str, err := HttpPostRequestBytesHeaderRest2("http://192.168.20.56:20010/ias/auth/mobilelogin", bytesData)
 	if nil == err {
 		fmt.Println(*str)

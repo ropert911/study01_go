@@ -22,6 +22,7 @@ func HTTPsGet(url string) (string, error) {
 		return "", err
 	}
 	defer resp.Body.Close()
+
 	body, err := ioutil.ReadAll(resp.Body)
 	return string(body), nil
 }

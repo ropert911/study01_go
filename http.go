@@ -8,53 +8,29 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
-	"unsafe"
+	//"strings"
+	//"unsafe"
 )
 
-type GpsInfo struct {
-	DeviceId  string  `bson:"deviceid,omitempty" json:"deviceid"`
-	Direction uint16  `bson:"direction,omitempty" json:"direction"`
-	Lat       float32 `bson:"lat,omitempty" json:"lat"`
-	Lng       float32 `bson:"lng,omitempty" json:"lng"`
-	Speed     float32 `bson:"speed,omitempty" json:"speed"`
-	Time      string  `bson:"time,omitempty" json:"time"`
-	Vehicle   string  `bson:"vehicle,omitempty" json:"vehicle"`
-}
-
-func HttpGet(url string) {
+func HttpGet(url string) (*string, error) {
 	resp, err := http.Get(url)
 	if err != nil {
-		fmt.Println(resp)
+		fmt.Println("request error 1", err)
+		return nil, err
 	}
 	defer resp.Body.Close()
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		fmt.Println(resp)
+		fmt.Println("ReadAll error 1", err)
+		return nil, err
 	}
 
-	fmt.Println(string(body))
+	var content = string(body)
+	return &content, nil
 }
 
-func httpPostForm(urls string, v url.Values) {
-	resp, err := http.PostForm(urls, v)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	defer resp.Body.Close()
-
-	respBytes, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Println(err)
-		return
-
-	}
-	fmt.Println(string(respBytes))
-}
-
-func HttpRequest(url string) (*string, error) {
-	//提交请求
+func HttpGetRequst(url string) (*string, error) {
 	request, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		panic(err)
@@ -79,52 +55,41 @@ func HttpRequest(url string) (*string, error) {
 	return &content, nil
 }
 
-func SamplePost1(urls string, v url.Values) {
-	reader := strings.NewReader(v.Encode())
-	req, err := http.NewRequest("POST", urls, ioutil.NopCloser(reader))
-	if err != nil {
-		// handle error
-	}
-
-	//Header
-	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-	req.Header.Set("Authorization", "Bear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImEwMDIiLCJuYW1lIjoi5byg5LiJIiwiVGVsIjoiMTMzNjQ2NTg1ODUiLCJleHAiOjE1MjgwODQ2NDksImlzcyI6IueBq-WxseWPoyJ9.I2sDmSL17BnuDs8zi77ZBUAFxQYpouXIoKfZRfZLNRc")
-
-	//发送
-	client := &http.Client{}
-	resp, err := client.Do(req)
+func HttpPost(urls string, v url.Values) (*string, error) {
+	resp, err := http.PostForm(urls, v)
 	if err != nil {
 		fmt.Println(err.Error())
-		return
+		return nil, err
 	}
 	defer resp.Body.Close()
 
-	//回应
 	respBytes, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println(err.Error())
-		return
+		return nil, err
 	}
-	fmt.Println(string(respBytes))
+
+	var content = string(respBytes)
+	return &content, nil
 }
 
-func SamplePost2(url string, bytesData []byte) {
+func HttpPostRequestBytesHeaderRest(url string, bytesData []byte) (*string, error) {
 	reader := bytes.NewReader(bytesData)
 	request, err := http.NewRequest("POST", url, reader)
 	if err != nil {
 		fmt.Println(err.Error())
-		return
+		return nil, err
 	}
 
 	//Header
 	request.Header.Set("Content-Type", "application/json")
 
 	//发送
-	client := http.Client{}
+	client := &http.Client{}
 	resp, err := client.Do(request)
 	if err != nil {
 		fmt.Println(err.Error())
-		return
+		return nil, err
 	}
 	defer resp.Body.Close()
 
@@ -132,29 +97,92 @@ func SamplePost2(url string, bytesData []byte) {
 	respBytes, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println(err.Error())
-		return
+		return nil, err
 	}
 
-	//byte数组直接转成string，优化内存
-	str := (*string)(unsafe.Pointer(&respBytes))
-	fmt.Println(*str)
+	var content = string(respBytes)
+	return &content, nil
+}
+
+func HttpPostRequestValuesHeaderRest(url string, v url.Values) (*string, error) {
+	reader := ioutil.NopCloser(strings.NewReader(v.Encode()))
+	request, err := http.NewRequest("POST", url, reader)
+	if err != nil {
+		fmt.Println(err.Error())
+		return nil, err
+	}
+
+	//Header
+	request.Header.Set("Content-Type", "application/json")
+
+	//发送
+	client := &http.Client{}
+	resp, err := client.Do(request)
+	if err != nil {
+		fmt.Println(err.Error())
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	//回应
+	respBytes, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println(err.Error())
+		return nil, err
+	}
+
+	var content = string(respBytes)
+	return &content, nil
+}
+
+type GpsInfo struct {
+	DeviceId  string  `bson:"deviceid,omitempty" json:"deviceid"`
+	Direction uint16  `bson:"direction,omitempty" json:"direction"`
+	Lat       float32 `bson:"lat,omitempty" json:"lat"`
+	Lng       float32 `bson:"lng,omitempty" json:"lng"`
+	Speed     float32 `bson:"speed,omitempty" json:"speed"`
+	Time      string  `bson:"time,omitempty" json:"time"`
+	Vehicle   string  `bson:"vehicle,omitempty" json:"vehicle"`
 }
 
 func main() {
-	HttpGet("http://www.baidu.com")
-	content, _ := HttpRequest("http://www.baidu.com")
-	fmt.Println(*content)
+	str, err := HttpGet("http://192.168.20.46:10099/device/getDeviceExtras")
+	if nil == err {
+		fmt.Println(*str)
+	}
 
-	httpPostForm("http://192.168.20.56:18004/itc/api/schoolbus/gps", url.Values{"Userlist": {"1145,1150"}})
+	fmt.Println("")
+	fmt.Println("===========")
+	str, err = HttpGetRequst("http://192.168.20.46:10099/device/getDeviceExtras")
+	if nil == err {
+		fmt.Println(*str)
+	}
 
+	fmt.Println("")
+	fmt.Println("===========")
+	str, err = HttpPost("http://192.168.20.56:18004/itc/api/schoolbus/gps", url.Values{"Userlist": {"1145,1150"}})
+	if nil == err {
+		fmt.Println(*str)
+	}
+
+	fmt.Println("")
+	fmt.Println("===========")
 	var gps = GpsInfo{DeviceId: "7070730", Direction: 120, Lat: 103.95077, Lng: 30.777979, Speed: 50.125, Time: "2019-06-19 17:48:40", Vehicle: "川A123"}
 	bytesData, _ := json.Marshal(gps)
-	SamplePost2("http://192.168.20.56:18004/itc/api/schoolbus/gps", bytesData)
+	str, err = HttpPostRequestBytesHeaderRest("http://192.168.20.56:18004/itc/api/schoolbus/gps", bytesData)
+	if nil == err {
+		fmt.Println(*str)
+	}
 
+	fmt.Println("")
+	fmt.Println("===========")
 	v := url.Values{}
-	v.Set("ApiUserId", "7")
-	v.Set("token", "99be71bc9c")
-	v.Set("UserID", "916")
-	v.Set("OrderID", "20201804110907523237")
-	SamplePost1("http://192.168.20.56:18004/itc/api/schoolbus/gps", v)
+	v.Set("DeviceId", "7070730")
+	v.Set("Direction", "120")
+	v.Set("Time", "2019-06-19 17:48:40")
+	v.Set("Vehicle", "川A123")
+	str, err = HttpPostRequestValuesHeaderRest("http://www.baidu.com", v)
+	if nil == err {
+		fmt.Println(*str)
+	}
 }

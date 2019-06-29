@@ -15,3 +15,4 @@ logs/
 # python
 *.pyc
 __pycache__
+/.idea/

@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -150,11 +152,28 @@ func jsonTest6() {
 	}
 	fmt.Println(string(dataStr))
 }
+
+type User struct {
+	Id      string
+	Balance uint64
+}
+
 func main() {
-	jsonTest1()
-	jsonTest2()
-	jsonTest3()
-	jsonTest4()
-	jsonTest5()
-	jsonTest6()
+	//jsonTest1() //json.Marshal(group) 对象=>json格式
+	//jsonTest2() //json.Unmarshal  json=>对象
+	//jsonTest3()
+	//jsonTest4()
+	//jsonTest5()
+	//jsonTest6()
+
+	//对象=>json
+	u := User{Id: "www.361way.com", Balance: 8}
+	b := new(bytes.Buffer)
+	json.NewEncoder(b).Encode(u)
+	io.Copy(os.Stdout, b)
+
+	//json==>对象
+	var u2 User
+	json.NewDecoder(b).Decode(&u2)
+	fmt.Println(u2)
 }

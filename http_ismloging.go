@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func HttpPostRequestBytesHeaderRest(url string, bytesData []byte) (*string, error) {
+func HttpPostRequestBytesHeaderRest2(url string, bytesData []byte) (*string, error) {
 	reader := bytes.NewReader(bytesData)
 	request, err := http.NewRequest("POST", url, reader)
 	if err != nil {
@@ -49,7 +49,7 @@ func main() {
 	var lInfo = LogInfo{UserName: "admin", Password: "admins", IsRemember: "true"}
 	bytesData, _ := json.Marshal(lInfo)
 	fmt.Println(string(bytesData))
-	str, err := HttpPostRequestBytesHeaderRest("http://192.168.20.56:20010/ias/auth/mobilelogin", bytesData)
+	str, err := HttpPostRequestBytesHeaderRest2("http://192.168.20.56:20010/ias/auth/mobilelogin", bytesData)
 	if nil == err {
 		fmt.Println(*str)
 	}

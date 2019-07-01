@@ -8,9 +8,40 @@ import (
 	"net/http"
 )
 
-func HttpPostRequestBytesHeaderRest2(url string, bytesData []byte) (*string, error) {
+func RESTHttpPostRequestBytes(url string, bytesData []byte) (*string, error) {
 	reader := bytes.NewReader(bytesData)
 	request, err := http.NewRequest("POST", url, reader)
+	if err != nil {
+		fmt.Println(err.Error())
+		return nil, err
+	}
+
+	//Header
+	request.Header.Set("Content-Type", "application/json")
+
+	//发送
+	client := &http.Client{}
+	resp, err := client.Do(request)
+	if err != nil {
+		fmt.Println(err.Error())
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	//回应
+	respBytes, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println(err.Error())
+		return nil, err
+	}
+
+	var content = string(respBytes)
+	return &content, nil
+}
+
+func RESTHttpGetRequest(url string, url_arg string) (*string, error) {
+	url = url + "?" + url_arg
+	request, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		fmt.Println(err.Error())
 		return nil, err
@@ -56,12 +87,18 @@ func main() {
 
 	//`{"UserName":"admin","Password":"admins", "IsRemember":"true"}`   这是对象的字符串
 
-	str, err := HttpPostRequestBytesHeaderRest2("http://192.168.20.56:20010/ias/auth/mobilelogin", bytesData)
+	str, err := RESTHttpPostRequestBytes("http://192.168.20.56:20010/ias/auth/mobilelogin", bytesData)
 	if nil == err {
 		fmt.Println(*str)
 	}
 
-	var vMap map[string]string
+	var vMap map[string]interface{}
 	json.Unmarshal([]byte(*str), &vMap)
-	fmt.Println("token is :", vMap["data"])
+	fmt.Println("success is :", vMap["success"].(bool))
+	fmt.Println("token is :", vMap["data"].(string))
+
+	str, err = RESTHttpGetRequest("http://192.168.20.56:20010/ias/auth/logout", "tokens=%s"+vMap["data"].(string))
+	if nil == err {
+		fmt.Println(*str)
+	}
 }

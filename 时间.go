@@ -75,6 +75,14 @@ func testTime5() {
 	}
 }
 
+//两个时间的差
+func testTime6() {
+	t1 := time.Now()
+	time.Sleep(time.Second * time.Duration(2))
+	t2 := time.Now()
+	fmt.Println(t2.Sub(t1))
+}
+
 func main() {
 	//打印utc的纳秒、微秒、毫秒
 	//testTime1()
@@ -89,5 +97,8 @@ func main() {
 	//testTime4()
 
 	//时间加减运算
-	testTime5()
+	//testTime5()
+
+	//两个时间的差
+	testTime6()
 }

@@ -8,7 +8,10 @@ import (
 	"net/http"
 )
 
-func RESTHttpPostRequestBytes(url string, bytesData []byte) (*string, error) {
+func RESTHttpPostRequestBytes(url string, urlArg string, bytesData []byte) (*string, error) {
+	if len(urlArg) > 0 {
+		url = url + "?" + urlArg
+	}
 	reader := bytes.NewReader(bytesData)
 	request, err := http.NewRequest("POST", url, reader)
 	if err != nil {
@@ -87,7 +90,7 @@ func main() {
 
 	//`{"UserName":"admin","Password":"admins", "IsRemember":"true"}`   这是对象的字符串
 
-	str, err := RESTHttpPostRequestBytes("http://192.168.20.56:20010/ias/auth/mobilelogin", bytesData)
+	str, err := RESTHttpPostRequestBytes("http://192.168.20.56:20010/ias/auth/mobilelogin", "", bytesData)
 	if nil == err {
 		fmt.Println(*str)
 	}
@@ -97,6 +100,29 @@ func main() {
 	fmt.Println("success is :", vMap["success"].(bool))
 	fmt.Println("token is :", vMap["data"].(string))
 
+	//建一级区域
+	values = map[string]string{
+		"address":        "in the hell",
+		"businessArea":   "1",
+		"businessTypeID": "1",
+		"categoryID":     "1",
+		"cityID":         "1",
+		"contact":        "auto_tester",
+		"email":          "xxx@163.com",
+		"name":           "xxxxxxxxxxxxxxxxxxxx",
+		"passengers":     "1",
+		"phone":          "10010",
+		"provinceID":     "1",
+		"remark":         "comm",
+		"scene":          "IOT",
+	}
+	bytesData, _ = json.Marshal(values)
+	str, err = RESTHttpPostRequestBytes("http://192.168.20.56:20010/ias/top/add", "token="+vMap["data"].(string), bytesData)
+	if nil == err {
+		fmt.Println(*str)
+	}
+
+	//
 	str, err = RESTHttpGetRequest("http://192.168.20.56:20010/ias/auth/logout", "tokens=%s"+vMap["data"].(string))
 	if nil == err {
 		fmt.Println(*str)

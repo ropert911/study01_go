@@ -189,7 +189,7 @@ func main() {
 	var spot = 0
 
 	AddITFRow(sheet, ITFInfo{top: "一级区域", sec: "二级区域", spot: "三级区域", detailAddress: "详细地址", itfName: "ITF名称", itfGWIp: "ITF网关IP", itfLng: "经度", itfLat: "纬度", comment: "备注"})
-	AddITFRow(sheet, ITFInfo{top: CreateFirstAreaName(top), sec: CreateSecAreaName(top, sec), spot: CreateSpotAreaName(top, sec, spot), detailAddress: "软件园A1", itfName: "20.47", itfGWIp: "192.168.20.47", itfLng: "104.070163", itfLat: "30.550011"})
+	AddITFRow(sheet, ITFInfo{top: CreateFirstAreaName(top), sec: CreateSecAreaName(top, sec), spot: CreateSpotAreaName(top, sec, spot), detailAddress: "软件园A1", itfName: fmt.Sprintf("135.%d.%d", i/255, i%255), itfGWIp: fmt.Sprintf("192.135.%d.%d", i/255, i%255), itfLng: "104.070163", itfLat: "30.550011"})
 
 	sheet, err = file.AddSheet("GW-SENSOR")
 	if err != nil {

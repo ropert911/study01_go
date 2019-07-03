@@ -16,6 +16,7 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
 	w.Write([]byte("upload success"))
+	file.Close()
 }
 
 func main() {

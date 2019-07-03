@@ -9,10 +9,10 @@ func CreateFirstAreaName(topIndex int) string {
 	return fmt.Sprintf("PerTest%d", topIndex)
 }
 func CreateSecAreaName(topIndex int, secIndex int) string {
-	return fmt.Sprintf("PerTest%d", topIndex)
+	return fmt.Sprintf("PerTest%d_%d", topIndex, secIndex)
 }
 func CreateSpotAreaName(topIndex int, secIndex int, spotIndex int) string {
-	return fmt.Sprintf("PerTest%d", topIndex)
+	return fmt.Sprintf("PerTest%d_%d_%d", topIndex, secIndex, spotIndex)
 }
 
 type ITFInfo struct {
@@ -184,8 +184,12 @@ func main() {
 		return
 	}
 
+	var top = 1
+	var sec = 1
+	var spot = 0
+
 	AddITFRow(sheet, ITFInfo{top: "一级区域", sec: "二级区域", spot: "三级区域", detailAddress: "详细地址", itfName: "ITF名称", itfGWIp: "ITF网关IP", itfLng: "经度", itfLat: "纬度", comment: "备注"})
-	AddITFRow(sheet, ITFInfo{top: "PerTest0", sec: "PerTest0_0", spot: "PerTest0_0_0", detailAddress: "软件园A1", itfName: "20.47", itfGWIp: "192.168.20.47", itfLng: "104.070163", itfLat: "30.550011"})
+	AddITFRow(sheet, ITFInfo{top: CreateFirstAreaName(top), sec: CreateSecAreaName(top, sec), spot: CreateSpotAreaName(top, sec, spot), detailAddress: "软件园A1", itfName: "20.47", itfGWIp: "192.168.20.47", itfLng: "104.070163", itfLat: "30.550011"})
 
 	sheet, err = file.AddSheet("GW-SENSOR")
 	if err != nil {
@@ -194,8 +198,8 @@ func main() {
 	}
 
 	AddSensorRow(sheet, DevInfo{top: "一级区域", sec: "二级区域", spot: "三级区域", detailAddress: "详细地址", devID: "设备ID", devName: "设备名称", devIdentification: "设备标识", devManufacturer: "设备厂家", devType: "设备类型", devVersion: "设备版本", devModel: "设备型号", gwUpProtocol: "网关上行协议", devLng: "经度", devLat: "纬度", heartTime: "心跳周期", carNum: "车牌号", comment: "备注"})
-	AddThirdAreaSensors(sheet, 1, 1, 1)
-	AddThirdAreaSensors(sheet, 1, 1, 2)
+	AddThirdAreaSensors(sheet, top, sec, spot)
+	AddThirdAreaSensors(sheet, top, sec, spot+1)
 
 	err = file.Save("C:\\Users\\sk-qianxiao\\Desktop\\区域.xlsx")
 	if err != nil {

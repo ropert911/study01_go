@@ -12,6 +12,7 @@ func test1() {
 			fmt.Printf("%c", r) // 世界
 		}
 	}
+	fmt.Println("")
 }
 
 func test2() {
@@ -37,6 +38,7 @@ func test2() {
 			fmt.Printf("%c", r) // ᾏᾟᾯ
 		}
 	}
+	fmt.Println("")
 }
 
 // 示例：输出 Unicode 规定的标题字符
@@ -46,6 +48,7 @@ func test3() {
 			fmt.Printf("%c", i)
 		}
 	}
+	fmt.Println("")
 }
 
 // 示例：转换大小写
@@ -206,12 +209,21 @@ func test8() {
 
 // 示例：输出所有 mark 字符
 func main() {
-	for _, cr := range unicode.M.R16 {
-		Lo, Hi, Stride := rune(cr.Lo), rune(cr.Hi), rune(cr.Stride)
-		for i := Lo; i >= Lo && i <= Hi; i += Stride {
-			if unicode.IsMark(i) {
-				fmt.Printf("%c", i)
-			}
-		}
-	}
+	fmt.Println("test1=========判断是不是汉字")
+	test1()
+	fmt.Println("test2=========判断大小写标题")
+	test2()
+	fmt.Println("test3=========输出 Unicode 规定的标题字符")
+	test3()
+	fmt.Println("test4=========转换大小写")
+	test4()
+
+	//for _, cr := range unicode.M.R16 {
+	//	Lo, Hi, Stride := rune(cr.Lo), rune(cr.Hi), rune(cr.Stride)
+	//	for i := Lo; i >= Lo && i <= Hi; i += Stride {
+	//		if unicode.IsMark(i) {
+	//			fmt.Printf("%c", i)
+	//		}
+	//	}
+	//}
 }

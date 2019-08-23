@@ -85,20 +85,26 @@ func testTime6() {
 
 func main() {
 	//打印utc的纳秒、微秒、毫秒
-	//testTime1()
+	fmt.Println("==================打印utc的纳秒、微秒、毫秒")
+	testTime1()
 
 	//时间格式化显示
-	//testTime2()
+	fmt.Println("==================时间格式化显示")
+	testTime2()
 
 	//设置时间
-	//testTime3()
+	fmt.Println("==================设置时间")
+	testTime3()
 
 	//从字符串解析出时间
-	//testTime4()
+	fmt.Println("==================从字符串解析出时间")
+	testTime4()
 
 	//时间加减运算
-	//testTime5()
+	fmt.Println("==================时间加减运算")
+	testTime5()
 
 	//两个时间的差
+	fmt.Println("==================两个时间的差")
 	testTime6()
 }

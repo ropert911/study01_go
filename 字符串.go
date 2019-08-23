@@ -74,14 +74,17 @@ func strTest4() {
 // 示例
 func main() {
 	//根据字符串解析出整数
-	//strTest1()
+	strTest1()
 
 	//根据字符串解析出浮点数
-	//strTest2()
+	fmt.Println("=================根据字符串解析出浮点数")
+	strTest2()
 
 	//string bytes相互转换
-	//strTest3()
+	fmt.Println("=================string bytes相互转换")
+	strTest3()
 
 	//string与bytes的切片
+	fmt.Println("=================string与bytes的切片")
 	strTest4()
 }

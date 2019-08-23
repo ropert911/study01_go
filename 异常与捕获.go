@@ -24,6 +24,7 @@ func main() {
 	a = 10
 	foo(a)
 
+	fmt.Println("============")
 	var b int
 	b = -10
 	foo(b)

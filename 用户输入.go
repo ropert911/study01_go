@@ -17,7 +17,7 @@ func main() {
 	//Scanf与其类似，除了 Scanf 的第一个参数用作格式字符串，用来决定如何读取
 	// fmt.Scanf("%s %s", &firstName, &lastName)
 
-	fmt.Printf("Hi %s %s!\n", FirstName, SecondNames)
+	fmt.Printf("Hi [%s] %s!\n", FirstName, SecondNames)
 
 	//从 Input读，使用format格式
 	fmt.Sscanf(Input, format, &f, &i, &ThirdNames)

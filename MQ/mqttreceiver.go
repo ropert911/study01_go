@@ -1,4 +1,4 @@
-package mqtt
+package main
 
 import (
 	"encoding/json"
@@ -6,6 +6,7 @@ import (
 	MQTT "github.com/eclipse/paho.mqtt.golang"
 	"net/url"
 	"strings"
+	"study01_go/MQ/mqtt"
 )
 
 func onIncomingDataReceived(client MQTT.Client, message MQTT.Message) {
@@ -32,7 +33,7 @@ func main() {
 		User:   url.UserPassword(username, password),
 	}
 
-	client, err := CreateMQTTClient(MqttClientId, uri, keepAlive)
+	client, err := mqtt.CreateMQTTClient(MqttClientId, uri, keepAlive)
 	if err != nil {
 		fmt.Printf("createMQTTClient error:%v\n", err)
 		return

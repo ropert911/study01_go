@@ -8,11 +8,11 @@ import (
 func ipTest1() {
 	address := net.ParseIP("1.2.3.4")
 	if address == nil {
-		fmt.Printf("invalid IP Address: %s\n", address)
+		fmt.Printf("invalid IP Address1: %s\n", address)
 	}
 	address = net.ParseIP("aaa")
 	if address == nil {
-		fmt.Printf("invalid IP Address: %s\n", address)
+		fmt.Printf("invalid IP Address2: %s\n", address)
 	}
 }
 
@@ -39,7 +39,7 @@ func ipTest2() (ips []string) {
 
 func main() {
 	//IP合法性检查
-	//ipTest1()
+	ipTest1()
 	//获取本机IP
 	ipTest2()
 }

@@ -1,5 +1,6 @@
 package main
 
+//安全加密的参考文章：https://studygolang.com/articles/15642?fr=sidebar
 //对称加密, 加解密都使用的是同一个密钥, 其中的代表就是AES
 
 //AES：高级加密标准（Advanced Encryption Standard），又称Rijndael加密法，这个标准用来替代原先的DES。AES加密数据块分组长度必须为128bit(byte[16])，密钥长度可以是128bit(byte[16])、192bit(byte[24])、256bit(byte[32])中的任意一个。

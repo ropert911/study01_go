@@ -50,7 +50,7 @@ func AesDecrypt(cryted string, key string) string {
 	// 获取秘钥块的长度
 	blockSize := block.BlockSize()
 	// 加密模式
-	blockMode := cipher.NewCBCDecrypter(block, k[:blockSize])
+	blockMode := cipher.NewCBCDecrypter(block, k[:blockSize]) //这里第二个参数是向量，这里没有批量，直接用了一个数
 	// 创建数组
 	orig := make([]byte, len(crytedByte))
 	// 解密
@@ -73,7 +73,7 @@ func AesEncrypt(orig string, key string) string {
 	// 补全码
 	origData = PKCS7Padding(origData, blockSize)
 	// 加密模式
-	blockMode := cipher.NewCBCEncrypter(block, k[:blockSize])
+	blockMode := cipher.NewCBCEncrypter(block, k[:blockSize]) //这里第二个参数是向量，这里没有批量，直接用了一个数
 	// 创建数组
 	cryted := make([]byte, len(origData))
 	// 加密
